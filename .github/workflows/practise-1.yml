@@ -1,0 +1,24 @@
+name: Running multiple jobs
+
+on:
+  workflow_dispatch:
+
+jobs:
+  BASH-script:
+    name: RUNNING BASH-SCRIPT
+    runs-on: ubuntu-latest
+    steps:
+      - name: Running first script
+        run: |
+          echo "Hello World, this is Job 1"
+          echo "this is rishi kumar"
+
+  Python-script:
+    name: Running python script
+    runs-on: ubuntu-latest
+    steps:
+      - name: Running python steps
+        run: |
+          print("Hello World, this is Job 2")
+          print("this is rishi kumar")
+        shell: python
